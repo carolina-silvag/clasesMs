@@ -1,0 +1,14 @@
+{
+  "name": "nombre",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "js2xmlparser": "^3.0.0"
+  },
+  "devDependencies": {
+    "express": "^4.16.3"
+  }
+}
