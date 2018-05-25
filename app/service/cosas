@@ -1,0 +1,149 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://soa.bestado.cl/services/Header/v1.3" xmlns:v11="http://soa.bestado.cl/services/QryCustomerOperationAccount/v1.1">
+    <soapenv:Header>
+      <v1:Trx>
+      <ServiceId>massiveSelectCustomerOperationRUT</ServiceId>
+      <Type>Request</Type>
+      <ServiceVersion>1.0</ServiceVersion>
+      <InstitutionType>UNDEFINED</InstitutionType>
+      <Locale>es_CL</Locale>
+      <ChannelDispatchDate/>
+      <CustomProperties/>
+      <TraceNumber/>
+      <SourceDate/>
+      <InstitutionId/>
+      <OrganizationId/>
+      <BranchId>001</BranchId>
+      <ChannelId>HB</ChannelId>
+      <UserId>uriTech=;uriSFB=7018976;userName=7018976;</UserId>
+      <ErrorCode/>
+      <Client>
+<UserAgent>TW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvNTcuMC4yOTg3LjExMCBTYWZhcmkvNTM3LjM2</UserAgent>
+        <Address>::1</Address>
+        <SessionId>prueba</SessionId>
+        <UserId>7018976</UserId>
+      </Client>
+    </v1:Trx>
+   </soapenv:Header>
+    <soapenv:Body>
+      <v11:massiveSelectCustomerOperationRUT>
+         <customerIdentification>
+            <identificationComplement>4</identificationComplement>
+            <identificationNumber>14049078</identificationNumber>
+         </customerIdentification>
+      </v11:massiveSelectCustomerOperationRUT>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:esb="http://soa.bestado.cl/services/Header/v1.3">
+   <soapenv:Header>
+      <esb:Trx>
+         <ServiceId>massiveSelectCustomerOperationRUT</ServiceId>
+         <Type>Response</Type>
+         <InstitutionType>UNDEFINED</InstitutionType>
+         <FeatureId/>
+         <ChannelId>HB</ChannelId>
+         <BranchId>001</BranchId>
+         <TimeStamp/>
+         <ErrorCode>0</ErrorCode>
+         <ReasonCode/>
+         <Audit/>
+         <Locale>es_CL</Locale>
+         <TraceLevel/>
+         <Token>6q7zujbk8j5z7n2e.1527264799824</Token>
+         <TerminalId/>
+         <ExceptionTopic/>
+         <Client>
+            <UserAgent>TW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvNTcuMC4yOTg3LjExMCBTYWZhcmkvNTM3LjM2</UserAgent>
+            <Address>::1</Address>
+            <SessionId>prueba</SessionId>
+            <UserId>7018976</UserId>
+            <OperatorId/>
+         </Client>
+         <internals>
+            <translate>true</translate>
+            <serviceProviderName>CICS</serviceProviderName>
+            <serviceProviderEntityName>BECH</serviceProviderEntityName>
+            <serviceResponseTimestamp>20180525111319963</serviceResponseTimestamp>
+         </internals>
+      </esb:Trx>
+   </soapenv:Header>
+   <soapenv:Body>
+      <srv:massiveSelectCustomerOperationRUTResponse xmlns:srv="http://soa.bestado.cl/services/QryCustomerOperationAccount/v1.1">
+         <customerOperations>
+            <customerOperation>
+               <operationId>36370934490</operationId>
+               <subproduct>
+                  <mnemonic>CUENTA_RUT</mnemonic>
+                  <shortDesc>Cuenta Rut</shortDesc>
+                  <longDesc/>
+                  <originalCodes>originalCode=007;</originalCodes>
+                  <internalValues>isAlias=false;</internalValues>
+                  <product>
+                     <mnemonic>CHEQUERA_ELECTRONICA</mnemonic>
+                     <shortDesc>Chequera Electrónica</shortDesc>
+                     <longDesc>Cuenta Vista</longDesc>
+                     <originalCodes>originalCode=CTV;</originalCodes>
+                     <internalValues>isAlias=false;</internalValues>
+                  </product>
+               </subproduct>
+            </customerOperation>
+            <customerOperation>
+               <operationId>00000517411</operationId>
+               <subproduct>
+                  <mnemonic>CHEQUERA_ELECTRONICA_CUENTA_COMERCIO</mnemonic>
+                  <shortDesc>CUENTA COMERCIO</shortDesc>
+                  <longDesc/>
+                  <originalCodes>originalCode=010;</originalCodes>
+                  <internalValues>isAlias=false;</internalValues>
+                  <product>
+                     <mnemonic>CUENTA_CORRIENTE</mnemonic>
+                     <shortDesc>Cuenta Corriente</shortDesc>
+                     <longDesc>Cuenta Corriente</longDesc>
+                     <originalCodes>originalCode=CCT;</originalCodes>
+                     <internalValues>isAlias=false;</internalValues>
+                  </product>
+               </subproduct>
+            </customerOperation>
+            <customerOperation>
+               <operationId>00161398500</operationId>
+               <subproduct>
+                  <mnemonic>AHORRO_SIN_LIBRETA_PLAZO_GIRO_DIFERIDO</mnemonic>
+                  <shortDesc>AH. PLAZO GIRO/DIFERIDO</shortDesc>
+                  <longDesc/>
+                  <originalCodes>originalCode=0300;</originalCodes>
+                  <internalValues>isAlias=false;</internalValues>
+                  <product>
+                     <mnemonic>CUENTA_AHORRO</mnemonic>
+                     <shortDesc>Cuenta Ahorro</shortDesc>
+                     <longDesc>Cuenta Ahorro</longDesc>
+                     <originalCodes>originalCode=AHO;</originalCodes>
+                     <internalValues>isAlias=false;</internalValues>
+                  </product>
+               </subproduct>
+            </customerOperation>
+            <customerOperation>
+               <operationId>00000000000</operationId>
+               <subproduct>
+                  <mnemonic translationErrorCode="UNDEFINED_TRANSLATION" translationErrorDetail="No existe traduccion para el codigo 416 del enumerado SUBPRODUCT con los parametros de busqueda establecidos (ServiceProviderEntity: BECH, ServiceProvider: CICS)">416</mnemonic>
+                  <shortDesc/>
+                  <longDesc/>
+                  <originalCodes>originalCode=416;</originalCodes>
+                  <internalValues>isAlias=false;</internalValues>
+                  <product>
+                     <mnemonic translationErrorCode="UNDEFINED_TRANSLATION" translationErrorDetail="No existe traduccion para el codigo ATM del enumerado PRODUCT con los parametros de busqueda establecidos (ServiceProviderEntity: BECH, ServiceProvider: CICS)">ATM</mnemonic>
+                     <shortDesc/>
+                     <longDesc/>
+                     <originalCodes>originalCode=ATM;</originalCodes>
+                     <internalValues>isAlias=false;</internalValues>
+                  </product>
+               </subproduct>
+            </customerOperation>
+         </customerOperations>
+         <generic>
+            <rowNumber>4</rowNumber>
+         </generic>
+      </srv:massiveSelectCustomerOperationRUTResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
