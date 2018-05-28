@@ -15,11 +15,11 @@ res.setHeader('Access-Control-Allow-Credentials', false);
 next();
 })
 
-var puerto2 = 3020;
+var puerto2 = 3022;
 
 require('./app/routes/routes')(ex);
 
-console.log("Iniciando Billetera");
+console.log("Iniciando Prueba");
 
 ex.listen(puerto2);
 console.log("Iniciando");

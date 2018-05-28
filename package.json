@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "js2xmlparser": "^3.0.0",
+    "json-validation": "^1.0.4",
     "soap-client-bech": "^2.0.0"
   },
   "devDependencies": {
