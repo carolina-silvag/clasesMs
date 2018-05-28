@@ -1,17 +1,24 @@
 'use strict';
 var soap = require("soap-client-bech");
+console.log('aquiiiiiiiiiiiii', soap)
+
 exports.consultarTest = function (req, res) {
    console.log('[MS PRUEBA] CONTROLLER: Actualizar Test');
 
-    var soapBody = getBody();     
+    var soapBody = getBody();
+    console.log('body', soapBody)     
     var soapHeader = getHeader();
+    console.log('headers', soapHeader)
     var funcionWSDL = getFuncionWSDL();
+    console.log('funcion WSDL', funcionWSDL)
     var url = getUrl();
+    console.log('url', url)
+    
     var prom = soap.strongSoapB9(url, soapHeader, soapBody, funcionWSDL);
-    console.log(prom)
+    console.log('promesas', prom)
 
     prom.then(function (resultado) {
-        var responseSalida = res.status(200).send(resultado)
+        var responseSalida = res.status(200).send(resultado.result)
         return responseSalida;
     }).catch(function (e) {
     
@@ -29,6 +36,7 @@ function getUrl(req) {
 
 function getHeader(req) {
     return {
+        "ServiceId": "massiveSelectCustomerOperationRUT",
         "Type": "Request",
         "ServiceVersion": "1.0",
         "InstitutionType": "UNDEFINED",
@@ -46,12 +54,12 @@ function getHeader(req) {
     };
 }
 
-function getBody(req) {
+function getBody() {
     
     return {
         "customerIdentification": {
-            "identificationComplement": req.params.dvCliente,
-            "identificationNumber": req.params.rutCliente
+            "identificationComplement": '4',
+            "identificationNumber": '14049078'
         }
     };
 }

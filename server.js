@@ -15,7 +15,7 @@ res.setHeader('Access-Control-Allow-Credentials', false);
 next();
 })
 
-var puerto2 = 3022;
+var puerto2 = 3019;
 
 require('./app/routes/routes')(ex);
 
