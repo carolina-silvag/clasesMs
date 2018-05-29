@@ -54,12 +54,12 @@ function getHeader(req) {
     };
 }
 
-function getBody() {
+function getBody(req) {
     
     return {
         "customerIdentification": {
-            "identificationComplement": '4',
-            "identificationNumber": '14049078'
+            "identificationComplement": req.params.dvClient,
+            "identificationNumber": req.params.rutClient
         }
     };
 }
