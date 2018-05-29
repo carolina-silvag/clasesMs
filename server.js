@@ -1,6 +1,6 @@
 const express = require('express');
-var bodyParser = require('body-parser');
-var ex = express();
+const bodyParser = require('body-parser');
+const ex = express();
 
 ex.use(bodyParser.urlencoded({ extended: false }))
 
@@ -15,7 +15,7 @@ res.setHeader('Access-Control-Allow-Credentials', false);
 next();
 })
 
-var puerto2 = 3019;
+var puerto2 = 3020;
 
 require('./app/routes/routes')(ex);
 

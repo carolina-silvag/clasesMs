@@ -7,5 +7,7 @@ exports.test = function (req, res) {
         'color': 'negro'
     }
     res.status(200).send(obj);
+    var prueba = req.query.hola
+    console.log('en get funcion', prueba)
 }
 

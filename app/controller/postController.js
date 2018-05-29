@@ -40,7 +40,8 @@ exports.test = function (req, res) {
         return res.status(400).send({error:'Error de Validación'});
     }
 
-
+    var prueba = req.query.hola
+    console.log('ESTA ES LA PRUEBA FUNCIONA', prueba)
     var body = req.body;
     var header = req.headers;
     console.log(header);
