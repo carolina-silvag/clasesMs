@@ -30,6 +30,26 @@ const getSoapParams = () => {
 	}
 
 	var getBody = function(req) {
+		var schema = {
+			type:'object',
+			properties: {
+				'dvClient': {
+					'type': 'string',
+					'required': true
+				},
+				'rutClient': {
+					'type': 'string'
+				}
+				
+			}
+    	}
+
+		var jv = new JSONValidation();
+		var resultBodyVal = jv.validate(req.body, schema);
+		if(!resultBodyVal.ok) {
+			console.info('resultBodyVal:' + resultBodyVal.errors.join(", ") + " at path" + resultBodyVal.path);
+			return res.status(400).send({error:'Error de Validación'});
+		}
 		return {
 		    "customerIdentification": {
 		        "identificationComplement": req.params.dvClient,
